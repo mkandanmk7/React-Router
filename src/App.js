@@ -1,4 +1,10 @@
-import { BrowserRouter, Route, Switch, Redirect, Link } from "react-router-dom";
+import {
+  BrowserRouter,
+  Route,
+  Switch,
+  Redirect,
+  NavLink,
+} from "react-router-dom";
 import Home from "./Home";
 import About from "./About";
 import Post from "./Post";
@@ -10,9 +16,15 @@ function App() {
 
       <BrowserRouter>
         <div>
-          <Link to="/">Home</Link>
-          <Link to="/post">Post</Link>
-          <Link to="/about">About</Link>
+          <NavLink exact activeStyle={{ color: "green" }} to="/">
+            Home
+          </NavLink>
+          <NavLink activeClass="active" to="/post">
+            Post
+          </NavLink>
+          <NavLink activeStyle={{ color: "green" }} to="/about">
+            About
+          </NavLink>
         </div>
         <Switch>
           <Route path="/" exact component={Home} />
