@@ -1,10 +1,12 @@
-import React from "react";
+import { useRouteMatch, useParams } from "react-router-dom";
 
-export default function PostData({ match }) {
-  console.log(match);
+export default function PostData() {
+  // console.log(match);
+  const match = useRouteMatch();
+  const params = useParams();
   return (
     <>
-      <p> Post Page {match.params.id} !</p>
+      <p> Post Page {params.id} !</p>
     </>
   );
 }
