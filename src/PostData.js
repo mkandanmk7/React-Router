@@ -1,10 +1,10 @@
 import React from "react";
 
 export default function PostData({ match }) {
-  console.log(match.params);
+  console.log(match);
   return (
     <>
-      <p> Post Page !</p>
+      <p> Post Page {match.params.id} !</p>
     </>
   );
 }
