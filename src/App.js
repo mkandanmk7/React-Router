@@ -19,18 +19,18 @@ function App() {
           <NavLink exact activeStyle={{ color: "green" }} to="/">
             Home
           </NavLink>
-          <NavLink activeClass="active" to="/post">
-            Post
-          </NavLink>
           <NavLink activeStyle={{ color: "green" }} to="/about">
             About
+          </NavLink>
+          <NavLink activeClass="active" to="/post">
+            Post
           </NavLink>
         </div>
         <Switch>
           <Route path="/" exact component={Home} />
-          <Route Path="/post" component={Post} />
-          <Route Path="/about" component={About} />
-          <Route Path="/home">
+          <Route path="/about" component={About} />
+          <Route path="/post" component={Post} />
+          <Route path="/home">
             <Redirect to="/" />
           </Route>
         </Switch>
